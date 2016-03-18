@@ -1,6 +1,4 @@
 from pylab import *
-import sys
-sys.path.insert(0, './build/lib.linux-x86_64-2.7')
 import cufft
 
 i = arange(2**16)
