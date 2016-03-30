@@ -13,4 +13,5 @@ void cufft_core_execute(float* Signal_h, int Size, float2* SignalFFT_h) {
     cudaMemcpy(SignalFFT_h, SignalFFT_d, (Size/2+1)*sizeof(float2), cudaMemcpyDeviceToHost);
     cudaFree(Signal_d);
     cudaFree(SignalFFT_d);
+    cufftDestroy(Plan);
 }
